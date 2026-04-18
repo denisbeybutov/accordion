@@ -199,3 +199,22 @@ ul,ol,li {
         transform: rotate(180deg);
     }
 }
+@keyframes rotateDownAnimation {
+    0% {
+        transform: rotate(180deg);
+        
+    }
+
+    20% {
+        transform: rotate(190deg);
+        
+    }
+
+    80% {
+        transform: rotate(-10deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}

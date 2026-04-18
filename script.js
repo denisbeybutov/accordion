@@ -38,26 +38,29 @@ function toggleQuestion(event){
 }
 
 function open(item, currentQuestionId){
+    //открываем ответ
     const heightOfText = 50 + questions[currentQuestionId-1].height;
     item.classList.add('open');
     item.style.setProperty('--myHeight', `${heightOfText}px`);
     item.style.setProperty('--myHeightPlusFive', `${heightOfText + 5}px`);
-    
+    //открываем стрелку
     const down = item.querySelector('.accordion__down');
     down.classList.add('rotate-up')
 }
 
 function close(item, currentQuestionId){
+    //скрываем ответ
     item.classList.remove('open')
     item.classList.add('close')
     setTimeout(()=>{item.classList.remove('close')},900)
-    console.log(item.querySelector('.accordion__down'));
+    //скрываем стрелку
     const down = item.querySelector('.accordion__down');
-    
+    down.classList.remove('rotate-up')
+    down.classList.add('rotate-down')
+    setTimeout(()=>{down.classList.remove('rotate-down')},900)
 }
 
 //программа
 
 initArrOfQuestions(questions);
 list.addEventListener('click', toggleQuestion);
-// list.addEventListener('click', closeQuestion);
