@@ -5,6 +5,7 @@ const items = document.querySelectorAll('[data-id]')
 const questions = [];
 
 //функции
+//инициализация массива
 function initArrOfQuestions(arr){
     items.forEach(item => {
         arr.push(
@@ -16,9 +17,9 @@ function initArrOfQuestions(arr){
             }
         )
     })
-    // console.log(arr);
-}
 
+}
+//изменение вопроса
 function toggleQuestion(event){
     
     const currentQuestionId = event.target.parentElement.dataset.id || 
@@ -36,7 +37,7 @@ function toggleQuestion(event){
     })
 
 }
-
+//открытие вопроса
 function open(item, currentQuestionId){
     //открываем ответ
     const heightOfText = 50 + questions[currentQuestionId-1].height;
@@ -47,7 +48,7 @@ function open(item, currentQuestionId){
     const down = item.querySelector('.accordion__down');
     down.classList.add('rotate-up')
 }
-
+//закрытие вопроса
 function close(item, currentQuestionId){
     //скрываем ответ
     item.classList.remove('open')
@@ -59,6 +60,8 @@ function close(item, currentQuestionId){
     down.classList.add('rotate-down')
     setTimeout(()=>{down.classList.remove('rotate-down')},900)
 }
+
+
 
 //программа
 

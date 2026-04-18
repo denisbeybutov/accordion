@@ -155,11 +155,11 @@ ul,ol,li {
     }
 
     80% {
-        /* height: 205px; */
+        
         height: var(--myHeightPlusFive);
     }
     100% {
-        /* height: 200px; */
+        
         height: var(--myHeight);
     }
 }
