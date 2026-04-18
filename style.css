@@ -1,0 +1,141 @@
+@font-face {
+    font-family: "Babas neue";
+    src: url('./fonts/BebasNeue.woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Inter Bold";
+    src: url('./fonts/Inter-Bold.woff2');
+    font-weight: 700;
+}
+@font-face {
+    font-family: "Inter Medium";
+    src: url('./fonts/Inter-Medium.woff2');
+    font-weight: 500;
+}
+
+
+body {
+    background-color: rgb(233, 233, 233);
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+ul,ol,li {
+    list-style-type: none;
+}
+
+
+
+.wrapper {
+    padding: 20px;
+    
+}
+
+.accordion {
+    width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.accordion__header-text {
+    font-family: "Babas neue";
+    font-size: 60px;
+    text-transform: uppercase;
+}
+
+.accordion__list{
+    font-family: "Inter Medium";
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /* background-color: red; */
+}
+
+.accordion__item {
+    box-shadow: 0px 6px 11px -2px rgb(206, 205, 205);
+    background-color: white;
+    cursor: pointer;
+}
+
+.accordion__question-header{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    border: 1px solid rgb(208, 207, 207);
+    
+}
+
+.accordion__question {
+    font-family: "Inter Bold";
+    font-size: 14px;
+}
+
+.accordion__question-main {
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 0;
+    /* min-height: 10px; */
+    border: 1px solid rgb(208, 207, 207);
+    border-top: none;
+    overflow: hidden;
+    opacity: 1;
+    /* transition:  min-height .3s, padding .3s; */
+}
+
+
+
+.accordion__answer{
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.accordion__button {
+    background-color: #FF8A00;
+    color: white;
+    border: none;
+    padding: 6px 14px ;
+    font-size: 12px;
+    width: 90px;
+    border-radius: 5px;
+}
+
+.hidden {
+    display: none;
+}
+/* 
+.hidden-question {
+    opacity: 0;
+    height: 0;
+    min-height: 0;
+    padding: 0 15px;
+    border: none;
+} */
+
+.animation {
+    
+    animation: ani .5s forwards;
+}
+
+@keyframes ani {
+    from {
+        height: 0;
+    }
+    to {
+        padding: 15px;
+        height: 200px;
+    }
+}
